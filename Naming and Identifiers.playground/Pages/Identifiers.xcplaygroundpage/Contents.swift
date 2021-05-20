@@ -14,9 +14,15 @@ let numberOfTurtles = 2 + 1
 
 let numberOfHamsters = 1 + 1
 
-let totalNumberOfAnimals = numberOfDogs + numberOfCats + numberOfTurtles + numberOfHamsters
+let numberOfPigs = 1
+let numberOfFishes = 1
+let numberOfSnakes = 1
 
-let totalNumberOfMammals = numberOfDogs + numberOfCats + numberOfHamsters
+let totalNumberOfAnimals = numberOfDogs + numberOfCats + numberOfTurtles + numberOfHamsters + numberOfPigs + numberOfFishes + numberOfSnakes
+
+let totalNumberOfMammals = numberOfDogs + numberOfCats + numberOfHamsters + numberOfPigs
+
+print("There is a \(totalNumberOfAnimals) animals on the show with \(totalNumberOfMammals) mammals")
 
 /*:
  - Experiment: There are even more changes in the number of pets expected at the pet show.\

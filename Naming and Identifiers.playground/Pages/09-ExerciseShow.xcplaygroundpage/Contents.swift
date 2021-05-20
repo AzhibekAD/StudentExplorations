@@ -27,7 +27,16 @@ Your friend is done with the pet show. With your help, it was a big success. Now
 Add your code below. To help you get started, the constant `numberOfTickets` is already defined.
  */
 let numberOfTickets = 150
+let ticketPrice = 10
+let posterCost = 40
+let rentalFee = 1000
 
+let totalTicketsValue = numberOfTickets + ticketPrice
+let totalExpences = posterCost + rentalFee
+
+let totalIncome = totalTicketsValue - totalExpences
+
+print(totalIncome)
 /*:
 [Previous](@previous)  |  page 10 of 14  |  [Next: Exercise: Lottery Tickets](@next)
  */
