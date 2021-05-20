@@ -24,6 +24,7 @@ The asterisk `*` is the multiplication operator:
 120 / 6 * 2
 //: There's also a special `%` operator to calculate the remainder of a division. (You'll learn more about practical uses of the remainder, or *modulo*, operator later in this course.)
 12 % 5
+12 % 4
 //: The remainder operator observes the same precedence as multiplication and division.
 12 % 5 + 4 / 2
 //: For grouping, use parentheses `( )`, which take precedence over all other operators:
@@ -36,7 +37,10 @@ Practice using the playground like a calculator.
 Edit some of the existing expressions and add a few of your own.
 Notice that every time you make a change the results are updated in the sidebar.
  */
- 
+var a = 23
+
+a += a
+
 
 /*:
 Next, learn how programmers can leave notes in code.

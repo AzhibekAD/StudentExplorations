@@ -5,13 +5,14 @@ A playground is a place where you can play and experiment with code — and see 
 The simplest _line of code_ you can write is just a number:
  */
 765
+8576605
 /*:
 👆Notice how the number above looks different?
 This style of text is *editable code*, which means you can write it or change it to make things happen.
 
 For negative numbers use the minus sign:
  */
--1200
+-1200 + 11
 /*:
 Notice how the numbers also show up in the gray area to the right? 👉
 
