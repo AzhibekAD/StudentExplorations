@@ -11,6 +11,8 @@ func printGreeting() {
     let greeting = "Hello"
     print(greeting)
 }
+
+printGreeting()
 /*:
 You may be starting to see a pattern. A large part of programming is making up things, giving them names, and then calling those things by name to use them.
  
