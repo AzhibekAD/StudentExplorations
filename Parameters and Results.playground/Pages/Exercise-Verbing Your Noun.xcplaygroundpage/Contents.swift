@@ -8,7 +8,13 @@
  - callout(Exercise): Write a function that returns a sentence like “Row, row, row your boat” when given a verb and a noun argument. The function should look like this when you call it:\
  `let line = openingLine(verb: "Row", noun: "Boat")`
  */
+func opLine(verb: String, noun: String) -> String {
+    return "\(verb), \(verb), \(verb) your \(noun)"
+}
 
+let line = opLine(verb: "Row", noun: "Boat")
+
+print(line)
 /*:
 [Previous](@previous)  |  page 15 of 18  |  [Next: Exercise: Using Return Values](@next)
  */
