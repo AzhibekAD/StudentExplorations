@@ -8,7 +8,7 @@
  Remember from your first playground that you can use the _remainder operator_ to find out if one number divides evenly into another. Can the candy be split evenly among your band members? Check if the remainder is zero:
  */
 let bandMemberCount = 6
-let candyCount = 79
+let candyCount = 67
 if candyCount % bandMemberCount == 0 {
     "Rock on."
 } else {
