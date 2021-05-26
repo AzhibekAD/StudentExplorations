@@ -5,6 +5,8 @@
  */
 print("Hello, world!")
 print(360)
+
+print("Again I have to DO IT")
 /*:
 Just as you perform many activities when you get dressed, many things happen when you call the `print()` function, including:
 - Turning whatever you give it, including numbers, into a string.

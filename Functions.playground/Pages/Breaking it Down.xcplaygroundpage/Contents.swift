@@ -22,13 +22,29 @@ func merrilyDream() {
 func breatheBetweenVerses() {
     print("        ~        ")
 }
+
+func crocodileScream() {
+    print("If you see a crocodile")
+    print("Don't forget to scream")
+}
 //: Now you can use these functions to print the first verse and the start of the second verse like this:
 rowTheBoat()
 merrilyDream()
 breatheBetweenVerses()
 rowTheBoat()
-//:  - callout(Exercise): Write a function called `crocodileScream()` for the second two lines of the second verse, and call it to complete the song in the console.
+crocodileScream()
 
+//:  - callout(Exercise): Write a function called `crocodileScream()` for the second two lines of the second verse, and call it to complete the song in the console.
+//print("Row, row, row your boat")
+//print("Gently down the stream")
+//print("If you see a crocodile")
+//print("Don't forget to scream")
+//print("        ~        ")
+//print("Row, row, row your boat")
+//print("Gently down the stream")
+//print("This song is quite repetitive")
+//print("Can you spot the theme")
+//
 /*:
 Next, learn about making larger groups of tasks.
 

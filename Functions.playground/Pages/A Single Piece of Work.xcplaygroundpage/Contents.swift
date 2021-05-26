@@ -18,16 +18,24 @@ func rowTheBoat() {
  
  To actually run the code, you have to _call_ the function. Typing the name of the function will call the function. Uncomment the line below:
  */
-//rowTheBoat()
+rowTheBoat()
 /*:
  When you've called a function in a playground, you'll see results appear in the sidebar. Calling the `rowTheBoat` function will also print text in the console area below.
 
  - callout(Exercise): Write your own function that prints something to the console, then call your new function. Pay attention to the example above so that you know where all the parentheses `()` and braces `{}` should go.
  What happens if you call your function more than once?
  */
+func merryMerry() {
+    print("Merry merry meryy")
+}
+
+merryMerry()
+
+
 
 /*:
 Next, learn how to think about tasks and divide them up in a way that makes sense.
 
 [Previous](@previous)  |  page 4 of 12  |  [Next: Breaking It Down](@next)
  */
+
