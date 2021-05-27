@@ -3,12 +3,12 @@
  In this exercise you’ll make a function that gives different answers depending on the first word of the question. The `hasPrefix()` method tests if a string begins with another string:
  */
 "swift programming".hasPrefix("swift")
-"swift programming".hasPrefix("programming")
+"swift programming".hasSuffix("programming")
 //:  - callout(Exercise): Amend the function and tests below to respond to different first words. How about adding answers for who, what, why, and how questions?
 func responseTo(question: String) -> String {
     
     if question.hasPrefix("hello") {
-        return "Why, hello there"
+        return "Well, hello there"
     } else if question.hasPrefix("where") {
         return "To the North!"
     } else {

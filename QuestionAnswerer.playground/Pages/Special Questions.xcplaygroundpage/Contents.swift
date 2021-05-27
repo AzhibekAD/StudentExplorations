@@ -7,10 +7,10 @@ func responseTo(question: String) -> String {
     let lowerQuestion = question.lowercased()
     print(lowerQuestion)
     
-    if lowerQuestion.hasPrefix("where") {
-        return "To the North!"
-    } else if lowerQuestion == "where are the cookies?" {
+    if lowerQuestion == "where are the cookies?" {
         return "In the cookie jar!"
+    } else if lowerQuestion.hasPrefix("where") {
+        return "To the North!"
     } else {
         return "That really depends"
     }

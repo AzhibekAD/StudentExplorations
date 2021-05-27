@@ -4,7 +4,22 @@
  - callout(Exercise): In this final exercise you’ll combine the things you’ve learned over the last few pages. Update this `responseToQuestion` function so that it gives the answers specified below. It’s OK to go back and look and code from earlier pages.
  */
 func responseTo(question: String) -> String {
-    return "?"
+    let loweredQuestion = question.lowercased()
+    let answers = ["Wha?", "What do you want?", "I don't understand"]
+    
+    if loweredQuestion == "where are the cookies?" {
+        return "In the cookie Jar!"
+    } else if loweredQuestion.hasPrefix("hello") {
+        return "Well, Hello there!"
+    } else if loweredQuestion.hasPrefix("where")  {
+        return "Th the NORTH!"
+    } else if loweredQuestion.hasPrefix("can") {
+        return "No, can't"
+    } else if loweredQuestion.hasPrefix("should") {
+        return "Yes, definitely"
+    } else {
+        return answers.randomElement()!
+    }
 }
 //: 👇These answers should be “Why, hello there!”
 responseTo(question: "Hello there")
@@ -22,6 +37,11 @@ responseTo(question: "Where are the cookies?")
 responseTo(question: "Can I have a cookie?")
 responseTo(question: "CAN I HAVE A COOKIE?!?")
 responseTo(question: "Should I go?")
+
+
+responseTo(question: "Abuba")
+responseTo(question: "aaaa")
+responseTo(question: "qweqwe")
 
 /*:
  - Note: 
