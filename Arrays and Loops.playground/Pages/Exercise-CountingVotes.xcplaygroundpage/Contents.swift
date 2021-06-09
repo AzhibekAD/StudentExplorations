@@ -17,12 +17,23 @@ This is too many votes to tally quickly by hand, so you’ll write some code to 
  - Note: 
 This is also a lot of votes for Swift to use type inference to determine what kind of array it has. The type annotation is written in the array literals above to tell Swift the type of array. This prevents the playground from running slowly.
  */
- 
+ var yesVotes = 0
+var noVotes = 0
 //:  - callout(Exercise): Create two variables, one to count `yes` votes and one to count `no` votes. Each should start off with a value of zero.
 //:  - callout(Exercise): Create a `for…in` loop that iterates over one of the vote arrays and checks the value of each vote. If the vote is `true`, the loop should add one vote to the `yes` variable. If it's `false`, it should add one vote to the `no` variable.
-
+for vote in shouldMascotChangeVotes {
+    if vote == true {
+        yesVotes += 1
+    } else {
+        noVotes += 1
+    }
+}
 //:  - callout(Exercise): After the loop has finished, write an `if` statement that compares the two values and prints a different message based on whether the vote passed or failed.
-
+if yesVotes > noVotes {
+    print("YES")
+} else {
+    print("NO")
+}
 /*:
  - callout(Exercise): Test your code by calling the `for…in` loop on each of the vote arrays.\
 Which measures won by popular vote?
