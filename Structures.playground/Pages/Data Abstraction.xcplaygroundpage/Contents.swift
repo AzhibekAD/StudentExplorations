@@ -13,6 +13,8 @@ let artists = ["Brenda and the Del-chords", "Brenda and the Del-chords", "Fizz",
 let durations = [90, 200, 150, 440]
 
 func songInformation(/* supply parameters here*/) -> String {
+    var songNumber = Int()
+    
     /* Return a string describing the song,
      e.g. "\"Maybe\" by Brenda and the Del-chords, duration 200 seconds"
      */

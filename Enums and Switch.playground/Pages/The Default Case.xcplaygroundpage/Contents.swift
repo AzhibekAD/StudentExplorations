@@ -7,7 +7,7 @@ enum Quality {
     case bad, poor, acceptable, good, great
 }
 
-let quality = Quality.good
+let quality = Quality.bad
 //: The switch statement is a little different to the ones you’ve seen up to now:
 switch quality {
 case .bad:

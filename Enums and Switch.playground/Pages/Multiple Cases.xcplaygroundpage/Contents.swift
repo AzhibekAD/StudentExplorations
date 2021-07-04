@@ -4,7 +4,7 @@
  On the previous page you used a default case to match three of the values in this enum:
  */
 enum Quality {
-    case bad, poor, acceptable, good, great
+    case bad, poor, acceptable, good, great, terrible
 }
 
 let quality = Quality.good

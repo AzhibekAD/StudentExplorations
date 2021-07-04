@@ -9,7 +9,7 @@ enum LunchChoice {
     case pasta, burger, soup
 }
 //:  You can compare enum values using `==`, just as you have with values of the types `String` and `Int`:
-let myLunch = LunchChoice.burger
+let myLunch = LunchChoice.pasta
 let yourLunch = LunchChoice.burger
 
 if myLunch == yourLunch {

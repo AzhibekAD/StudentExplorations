@@ -16,10 +16,19 @@
  */
 // Add your own struct here:
 
+struct BodyPercent {
+    let height: Int
+    let weight: Int
+    
+    func result() -> Int{
+        return (height * weight) / 100
+    }
+}
 /*:
  - callout(Exercise): 
  Use the struct you created to make a new instance of your type.
  */
+BodyPercent(height: 170, weight: 55).result()
 
 //:  - Note: Here's an example of a placeholder type used for making a TrainingShoe:
 // Placeholder type

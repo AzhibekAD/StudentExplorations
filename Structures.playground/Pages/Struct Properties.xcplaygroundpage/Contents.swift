@@ -23,7 +23,7 @@ song.duration
  - Experiment: Uncomment the line below and look at the error.\
 The error is “Instance member 'title' cannot be used on type 'Song'.” It is saying that `title` can only be used on instances of the type `Song`, and not on the type itself.
  */
-//Song.title
+///Song.title
 /*:
  Experience the benefits of data abstraction next.
  

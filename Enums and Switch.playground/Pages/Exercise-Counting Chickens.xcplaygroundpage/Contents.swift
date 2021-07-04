@@ -9,6 +9,7 @@ chickens
 //:  The chickens are all hatched, so it’s safe to count them.
 var chickenOfInterestCount = 0
 for chicken in chickens {
+    if 
     chickenOfInterestCount += 1
 }
 chickenOfInterestCount
