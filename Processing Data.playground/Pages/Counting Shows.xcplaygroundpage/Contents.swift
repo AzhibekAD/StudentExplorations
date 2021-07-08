@@ -7,6 +7,14 @@
  */
 randomShowData
 //:  - callout(Exercise): Using the comments as a guide, tally the survey results simulated in `randomShowData`.
+var tabulator = Tabulator()
+
+for show in randomShowData {
+    tabulator.incrementCount(forValue: show)
+    print(show)
+    print(tabulator.count(forValue: show))
+}
+
 // Create a Tabulator instance.
 
 // Loop through the shows in randomShowData, incrementing the count for each one.

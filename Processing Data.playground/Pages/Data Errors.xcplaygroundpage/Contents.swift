@@ -7,6 +7,14 @@
  */
 // Create a Tabulator instance.
 
+var tabulator = Tabulator()
+
+for responce in surveyData {
+    tabulator.incrementCount(forValue: responce)
+    print(responce)
+    print(tabulator.count(forValue: responce))
+}
+
 // Loop through surveyData, incrementing the count for each response.
 
 // Loop through the tallied shows (stored in tabulator.values), printing the information from each one.
@@ -26,12 +34,35 @@ print("\n\n***** FIRST CLEANING PASS *****\n\n")
 // Print a header
 print("\n\n***** TABULATION FOR VALID DATA ******\n\n")
 
+for value in tabulator.values {
+    var errors = 0
+    
+    if showCatalog.contains(value) {
+        print(value)
+    } else {
+        errors += 1
+    }
+    
+}
 // Loop through all tabulator values. Only print the count for those that are contained in showCatalog.
 
 // Create a variable to keep a count of the errors.
 
 // Print a header
 print("\n\n***** DATA ERRORS ******\n\n")
+
+var rights = 0
+var notRights = 0
+for value in tabulator.values {
+    
+    if showCatalog.contains(value) {
+        rights += 1
+    } else {
+        notRights += 1
+    }
+
+}
+print(notRights)
 
 // Loop through all tabulator values.
 // If a value is not contained in showCatalog:

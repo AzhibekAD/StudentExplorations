@@ -8,7 +8,14 @@
  - callout(Exercise): Create a new catalog containing lowercased versions of all the shows.
  */
 // Make a new array variable.
+var newArray = ["A"]
+newArray.removeAll()
 
+for show in showCatalog {
+    newArray.append(show.lowercased())
+}
+
+newArray
 // For all shows in showCatalog, add a lowercase version to the array.
 
 //:  - callout(Exercise): Tabulate the survey data in a loop, making sure that you convert each value to lowercase before you increment the tabulator. As you did on the previous page, print the valid results, the errors, and the error count. Your code will be similar to the previous page, so feel free to copy it and paste it here as a starting point.
