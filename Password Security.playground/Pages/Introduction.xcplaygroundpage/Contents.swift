@@ -28,6 +28,16 @@ let tenMostCommonPasswords = [
  */
 let password = "password"
 
+func algorithm(your: String) {
+    if tenMostCommonPasswords.contains(your) {
+        print("Choose another password")
+    } else {
+        print("Your password's all right")
+    }
+    
+}
+
+algorithm(your: password)
 /*:
 page 1 of 5  |  [Next: Checking for Characters](@next)
  */
