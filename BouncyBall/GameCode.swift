@@ -10,7 +10,7 @@ for example if statements and for loops, at the top level; they have to be writt
 of a function.
 */
 
-let circle = OvalShape(width: 150, height: 150)
+let ball = OvalShape(width: 50, height: 50)
 let barrierHeight = 25.0
 let barrierWidth = 300.0
 
@@ -21,15 +21,92 @@ let barrierPoints = [
     Point(x: barrierWidth, y: 0)
 ]
 
+let funnelPoints = [
+    Point(x: 0, y: 50),
+    Point(x: 80, y: 50),
+    Point(x: 60, y: 0),
+    Point(x: 20, y: 0)
+]
+
+let targetPoints = [
+    Point(x: 10, y: 0),
+    Point(x: 0, y: 10),
+    Point(x: 10, y: 20),
+    Point(x: 20, y: 10)
+]
+
+
+
 let barrier = PolygonShape(points: barrierPoints)
+let funnel = PolygonShape(points: funnelPoints)
+let target = PolygonShape(points: targetPoints)
+
+fileprivate func barrierSetup() {
+    barrier.position = Point(x: 200, y: 150)
+    scene.add(barrier)
+    barrier.hasPhysics = true
+    barrier.isImmobile = true
+    barrier.angle = -2.5
+}
+
+
+fileprivate func ballSetup() {
+    ball.position = Point(x: 200, y: scene.height - 30)
+    scene.add(ball)
+    ball.hasPhysics = true
+    ball.fillColor = .cyan
+    ball.onCollision = ballCollided
+    ball.isDraggable = false
+    scene.trackShape(ball)
+    ball.onExitedScene = ballExitedScreen
+    ball.onTapped = resetGame
+    ball.bounciness = 1.0
+    
+}
+
+func ballCollided(with otherShape: Shape) {
+    if otherShape.name != "target" { return }
+    otherShape.fillColor = .black
+}
+
+fileprivate func funnelSetup() {
+    funnel.position = Point(x:200, y: scene.height - 25)
+    scene.add(funnel)
+    funnel.onTapped = dropBall
+    funnel.isDraggable = false
+}
+
+func targetSetup() {
+    target.position = Point(x: 100, y: 400)
+    target.hasPhysics = true
+    target.isImmobile = true
+    target.isImpermeable = true
+    target.fillColor = .green
+    scene.add(target)
+    target.name = "target"
+    target.isDraggable = false
+}
 
 func setup() {
-    circle.position = Point(x: 250, y: 400)
-    barrier.position = Point(x: 200, y: 150)
+    ballSetup()
+    barrierSetup()
+    funnelSetup()
+    targetSetup()
+    resetGame()
+}
 
-    circle.hasPhysics = true
-    barrier.hasPhysics = true
+func dropBall() {
+    ball.position = funnel.position
+    ball.stopAllMotion()
+    target.fillColor = .green
+    barrier.isDraggable = false
+}
+
+func ballExitedScreen() {
+    barrier.isDraggable = true
     
-    scene.add(circle)
-    scene.add(barrier)
+}
+
+func resetGame() {
+    ball.position = Point(x: 0, y: -80)
 }
